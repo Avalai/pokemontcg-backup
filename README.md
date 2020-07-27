@@ -5,17 +5,19 @@ Create a local backup of your Pokémon Trading Card set! This project uses the [
 ## Installation
 
 1. Clone this repository locally.
-2. Run `npm install` inside the project.
-3. Head to the [MongoDB website](https://www.mongodb.com/try/download/community) and download MongoDB Community Server for your operating system. Accept all of the default installation suggestions. You can choose not to download their GUI.
-4. Inside the project, run `npm run dev`,
-5. View the site in your browser at `http://localhost:3000/` once the terminal confirms that the project has compiled successfully.
+1. Run `npm install` inside the project.
+1. Head to the [MongoDB website](https://www.mongodb.com/try/download/community) and download MongoDB Community Server for your operating system. Accept all of the default installation suggestions. You can choose not to download their GUI.
+   - For macOS installation, follow [this guide](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/).
+1. Ensure the MongoDB service is started. This is automatic on Windows if you have just installed it.
+1. Inside the project, run `npm run dev`.
+1. View the site in your browser at `http://localhost:3000/` once the terminal confirms that the project has compiled successfully.
 
 ## Functionality
 
 The site includes the ability to:
 
-- Create a backup of the `base4` card set from the Pokémon TCG API to a local dabatase
+- Create a backup of the `base4` card set from the Pokémon TCG API to a local dabatase.
   - Note: If the data already exists, the site will check the incoming data and update it to the latest version.
-- Purge that backup from the local database
-- Search the local database for a card, based on the name, HP and rarity
+- Purge that backup from the local database.
+- Search the local database for a card, based on the name, HP and rarity.
   - Note: This is an `AND` field, not an `OR` field. This was an intentional decision in order to be able to filter cards - for example, all "Rare" cards with 90 HP.
