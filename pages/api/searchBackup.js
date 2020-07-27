@@ -24,7 +24,9 @@ export default async (req, res) => {
     }
 
     try {
-      const results = await PokeModel.find({ $and: search }).exec()
+      const results = await PokeModel.find(
+        search.length ? { $and: search } : undefined
+      ).exec()
       res.json(results)
     } catch (err) {
       res.statusCode = 500
